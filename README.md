@@ -5,6 +5,12 @@ Se incluyen una versión Bash para Linux, otra PowerShell para Windows y un
 programa Python que **invoca los scripts** para consultar múltiples puertos.
 Python usa únicamente su biblioteca estándar (Python 3.9 o posterior).
 
+**Entrega:** [repositorio público](https://github.com/AndreChacon1/practica-puertos)
+· [video explicativo](demo-puertos.mp4)
+· [pruebas automáticas](https://github.com/AndreChacon1/practica-puertos/actions).
+El video presenta resultados reales mediante diapositivas con texto, sin voz;
+no es una grabación de pantalla. Las pruebas pasaron en Windows y en Linux con Docker.
+
 ## Archivos
 
 | Archivo | Función |
@@ -142,5 +148,6 @@ gh repo create practica-puertos --public --source . --remote origin --push
 
 Usa `--private` si la entrega requiere un repositorio privado y concede acceso al
 docente. Entrega la URL del repositorio y el enlace del video con permiso de lectura.
-Los videos están excluidos del repositorio para evitar archivos pesados.
+Los videos están excluidos del repositorio para evitar archivos pesados,
+salvo `demo-puertos.mp4`, que contiene la demostración incluida.
 Consulta `VIDEO.md` para la grabación.

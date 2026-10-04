@@ -2,6 +2,11 @@
 
 Este archivo es un guion; no es una grabación ni evidencia de ejecución en Docker.
 
+Se incluye además [demo-puertos.mp4](demo-puertos.mp4): un video de aproximadamente
+2 minutos con diapositivas explicativas y resultados de ejecuciones reales de
+Bash en Docker, PowerShell en Windows y Python. No contiene voz ni captura de
+pantalla. Si el docente pide una grabación personal, utiliza el siguiente guion.
+
 1. **Presentación (20 segundos).** Muestra el repositorio y explica: “Esta práctica
    comprueba conexiones TCP. Preparé un script Bash para Linux, uno PowerShell
    para Windows y un programa Python que envía múltiples puertos”.
