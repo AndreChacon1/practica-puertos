@@ -1,0 +1,26 @@
+name: Pruebas de puertos
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probar PowerShell y consumidor Python
+        run: python -m unittest discover -s tests -v
+
+  linux-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construir imagen Linux
+        run: docker build -t practica-puertos .
+      - name: Probar Bash y consumidor Python dentro de Docker
+        run: docker run --rm --mount "type=bind,source=$PWD,target=/tests-src,readonly" -w /tests-src practica-puertos python3 -m unittest discover -s tests -v
